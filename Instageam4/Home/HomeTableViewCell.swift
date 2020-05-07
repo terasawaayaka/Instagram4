@@ -16,6 +16,7 @@ extension HomeTableViewCellDelegate {
 // MARK: - Property
 class HomeTableViewCell: BaseTableViewCell {
     weak var delegate: HomeTableViewCellDelegate? = nil
+    @IBOutlet weak var descriptionLavel: UILabel!
 }
 // MARK: - Life cycle
 extension HomeTableViewCell {
@@ -29,4 +30,7 @@ extension HomeTableViewCell {
 
 // MARK: - method
 extension HomeTableViewCell {
+    func updateCell(postModel: PostModel) {
+        descriptionLavel.text = postModel.description
+    }
 }

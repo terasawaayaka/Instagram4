@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 protocol HomeMainViewDelegate: NSObjectProtocol{
-    func didSelectRowAt()
+    func didSelectRowAt(indexPath:IndexPath)
 }
 extension HomeMainViewDelegate {
 }
@@ -18,6 +18,7 @@ extension HomeMainViewDelegate {
 class HomeMainView: BaseView {
     weak var delegate: HomeMainViewDelegate? = nil
     @IBOutlet weak var tableView: UITableView!
+    var postModels: [PostModel] = [PostModel]()
 }
 // MARK: - Life cycle
 extension HomeMainView {
@@ -30,19 +31,20 @@ extension HomeMainView {
 // MARK: - Protocol
 extension HomeMainView:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return postModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as?
             HomeTableViewCell else {return UITableViewCell()}
+        cell.updateCell(postModel: postModels[indexPath.row])
         return cell
     }
 }
 extension HomeMainView:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.didSelectRowAt()
+            delegate.didSelectRowAt(indexPath: indexPath)
         }
     }
 }
@@ -52,5 +54,9 @@ extension HomeMainView {
     func setDelegate() {
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    func getModel(postModels: [PostModel]) {
+        self.postModels = postModels
+        tableView.reloadData()
     }
 }

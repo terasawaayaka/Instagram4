@@ -13,6 +13,7 @@ import PGFramework
 class HomeViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var homeMainView: HomeMainView!
+    var postModels: [PostModel] = [PostModel]()
 }
 // MARK: - Life cycle
 extension HomeViewController {
@@ -26,6 +27,7 @@ extension HomeViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getModel()
     }
 }
 // MARK: - Protocol
@@ -37,8 +39,9 @@ extension HomeViewController:HeaderViewDelegate {
     }
 }
 extension HomeViewController:HomeMainViewDelegate {
-    func didSelectRowAt() {
+    func didSelectRowAt(indexPath:IndexPath) {
         let postViewController = PostViewController()
+        postViewController.postModel = postModels[indexPath.row]
         navigationController?.pushViewController(postViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -52,5 +55,11 @@ extension HomeViewController {
     func setDelegate() {
         headerView.delegate = self
         homeMainView.delegate = self
+    }
+    func getModel() {
+        PostModel.reads { (postModels) in
+            self.postModels = postModels
+            self.homeMainView.getModel(postModels: postModels)
+        }
     }
 }

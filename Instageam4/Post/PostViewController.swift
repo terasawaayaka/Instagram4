@@ -13,6 +13,7 @@ import PGFramework
 class PostViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var postMainView: PostMainView!
+    var postModel: PostModel = PostModel()
 }
 // MARK: - Life cycle
 extension PostViewController {
@@ -26,6 +27,8 @@ extension PostViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("desc:",postModel.description)
+        getModel()
     }
 }
 // MARK: - Protocol
@@ -48,5 +51,8 @@ extension PostViewController {
     }
     func setDelegate() {
         headerView.delegate = self
+    }
+    func getModel() {
+        self.postMainView.getModel(postModel: postModel)
     }
 }

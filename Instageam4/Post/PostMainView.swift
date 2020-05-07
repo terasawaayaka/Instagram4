@@ -12,10 +12,13 @@ import PGFramework
 protocol PostMainViewDelegate: NSObjectProtocol{
 }
 extension PostMainViewDelegate {
+    
 }
 // MARK: - Property
 class PostMainView: BaseView {
     weak var delegate: PostMainViewDelegate? = nil
+    @IBOutlet weak var descriptionLabel: UILabel!
+    var postModel: PostModel = PostModel()
 }
 // MARK: - Life cycle
 extension PostMainView {
@@ -29,4 +32,9 @@ extension PostMainView {
 
 // MARK: - method
 extension PostMainView {
+    func getModel(postModel: PostModel) {
+        updateCell(postModel: postModel) }
+    func updateCell(postModel: PostModel) {
+        descriptionLabel.text = postModel.description
+    }
 }

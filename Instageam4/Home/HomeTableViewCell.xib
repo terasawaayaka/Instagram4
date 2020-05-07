@@ -44,6 +44,9 @@
                     <constraint firstAttribute="trailing" secondItem="fRh-s9-whQ" secondAttribute="trailing" id="z6M-lx-4SG"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLavel" destination="5Kp-ub-V3R" id="sm3-y6-mqi"/>
+            </connections>
             <point key="canvasLocation" x="153.62318840579712" y="203.57142857142856"/>
         </tableViewCell>
     </objects>
