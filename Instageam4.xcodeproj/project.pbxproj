@@ -14,6 +14,12 @@
 		1F2C249F24639B0A0089BF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C249D24639B0A0089BF0C /* LaunchScreen.storyboard */; };
 		1F2C24A924639B990089BF0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24A724639B990089BF0C /* HomeViewController.swift */; };
 		1F2C24AA24639B990089BF0C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24A824639B990089BF0C /* HomeViewController.xib */; };
+		1F2C24AD2463A16A0089BF0C /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24AB2463A16A0089BF0C /* HomeMainView.swift */; };
+		1F2C24AE2463A16A0089BF0C /* HomeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24AC2463A16A0089BF0C /* HomeMainView.xib */; };
+		1F2C24B12463A1FA0089BF0C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24AF2463A1FA0089BF0C /* HomeTableViewCell.swift */; };
+		1F2C24B22463A1FA0089BF0C /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24B02463A1FA0089BF0C /* HomeTableViewCell.xib */; };
+		1F2C24B62463A6C50089BF0C /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24B42463A6C50089BF0C /* PostViewController.swift */; };
+		1F2C24B72463A6C50089BF0C /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24B52463A6C50089BF0C /* PostViewController.xib */; };
 		2E9FF20E50A0E196F2C325CD /* Pods_Instageam4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412B387E8ED95BBA0CFC51C3 /* Pods_Instageam4.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,12 @@
 		1F2C24A024639B0A0089BF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F2C24A724639B990089BF0C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F2C24A824639B990089BF0C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1F2C24AB2463A16A0089BF0C /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
+		1F2C24AC2463A16A0089BF0C /* HomeMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMainView.xib; sourceTree = "<group>"; };
+		1F2C24AF2463A1FA0089BF0C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		1F2C24B02463A1FA0089BF0C /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		1F2C24B42463A6C50089BF0C /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		1F2C24B52463A6C50089BF0C /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
 		38392E92EA5785D90CC1901C /* Pods-Instageam4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instageam4.debug.xcconfig"; path = "Target Support Files/Pods-Instageam4/Pods-Instageam4.debug.xcconfig"; sourceTree = "<group>"; };
 		412B387E8ED95BBA0CFC51C3 /* Pods_Instageam4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instageam4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69050D0A23E0EC1A4E3F644 /* Pods-Instageam4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instageam4.release.xcconfig"; path = "Target Support Files/Pods-Instageam4/Pods-Instageam4.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +77,7 @@
 		1F2C249124639B060089BF0C /* Instageam4 */ = {
 			isa = PBXGroup;
 			children = (
+				1F2C24B32463A6AF0089BF0C /* Post */,
 				1F2C24A624639B820089BF0C /* Home */,
 				1F2C249224639B060089BF0C /* AppDelegate.swift */,
 				1F2C249424639B060089BF0C /* SceneDelegate.swift */,
@@ -81,8 +94,21 @@
 			children = (
 				1F2C24A724639B990089BF0C /* HomeViewController.swift */,
 				1F2C24A824639B990089BF0C /* HomeViewController.xib */,
+				1F2C24AB2463A16A0089BF0C /* HomeMainView.swift */,
+				1F2C24AC2463A16A0089BF0C /* HomeMainView.xib */,
+				1F2C24AF2463A1FA0089BF0C /* HomeTableViewCell.swift */,
+				1F2C24B02463A1FA0089BF0C /* HomeTableViewCell.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		1F2C24B32463A6AF0089BF0C /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				1F2C24B42463A6C50089BF0C /* PostViewController.swift */,
+				1F2C24B52463A6C50089BF0C /* PostViewController.xib */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		21E3B0997081DA3F353ECDE3 /* Frameworks */ = {
@@ -163,9 +189,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F2C249F24639B0A0089BF0C /* LaunchScreen.storyboard in Resources */,
+				1F2C24AE2463A16A0089BF0C /* HomeMainView.xib in Resources */,
 				1F2C249C24639B0A0089BF0C /* Assets.xcassets in Resources */,
 				1F2C249A24639B060089BF0C /* Main.storyboard in Resources */,
+				1F2C24B22463A1FA0089BF0C /* HomeTableViewCell.xib in Resources */,
 				1F2C24AA24639B990089BF0C /* HomeViewController.xib in Resources */,
+				1F2C24B72463A6C50089BF0C /* PostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,8 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2C24B62463A6C50089BF0C /* PostViewController.swift in Sources */,
 				1F2C249324639B060089BF0C /* AppDelegate.swift in Sources */,
+				1F2C24B12463A1FA0089BF0C /* HomeTableViewCell.swift in Sources */,
 				1F2C249524639B060089BF0C /* SceneDelegate.swift in Sources */,
+				1F2C24AD2463A16A0089BF0C /* HomeMainView.swift in Sources */,
 				1F2C24A924639B990089BF0C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

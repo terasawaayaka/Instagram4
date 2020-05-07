@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Instageam4" customModuleProvider="target">
             <connections>
                 <outlet property="headerView" destination="jWg-Zz-plE" id="GZ2-qQ-3Gz"/>
+                <outlet property="homeMainView" destination="eve-j5-uGL" id="ZEi-0u-Wf2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,11 +26,19 @@
                         <constraint firstAttribute="height" constant="48" id="lXl-qW-b97"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eve-j5-uGL" customClass="HomeMainView" customModule="Instageam4" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="eve-j5-uGL" firstAttribute="top" secondItem="jWg-Zz-plE" secondAttribute="bottom" id="6dJ-Rc-XZk"/>
                 <constraint firstItem="jWg-Zz-plE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8hp-ef-1xQ"/>
+                <constraint firstItem="eve-j5-uGL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Acp-sQ-scR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eve-j5-uGL" secondAttribute="bottom" id="EXw-PR-Ntw"/>
                 <constraint firstItem="jWg-Zz-plE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KPm-oV-v0c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eve-j5-uGL" secondAttribute="trailing" id="aqA-Ze-tdw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jWg-Zz-plE" secondAttribute="trailing" id="c67-Or-vHP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

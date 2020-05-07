@@ -12,6 +12,7 @@ import PGFramework
 // MARK: - Property
 class HomeViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
+    @IBOutlet weak var homeMainView: HomeMainView!
 }
 // MARK: - Life cycle
 extension HomeViewController {
@@ -33,6 +34,13 @@ extension HomeViewController:HeaderViewDelegate {
         //todo 新規投稿の遷移先
     }
 }
+extension HomeViewController:HomeMainViewDelegate {
+    func didSelectRowAt() {
+        let postViewController = PostViewController()
+        navigationController?.pushViewController(postViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+}
 // MARK: - method
 extension HomeViewController {
     func setHeaderView() {
@@ -41,5 +49,6 @@ extension HomeViewController {
     }
     func setDelegate() {
         headerView.delegate = self
+        homeMainView.delegate = self
     }
 }
