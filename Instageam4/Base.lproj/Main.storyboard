@@ -19,10 +19,9 @@
         <!--Navigation Controller-->
         <scene sceneID="lfc-tk-c8b">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vaq-0i-p68" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Vaq-0i-p68" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VQF-ay-bib">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
