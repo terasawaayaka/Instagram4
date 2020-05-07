@@ -31,7 +31,9 @@ extension HomeViewController {
 // MARK: - Protocol
 extension HomeViewController:HeaderViewDelegate {
     func touchedRightButton(_ sender: UIButton) {
-        //todo 新規投稿の遷移先
+        let newPostViewController = NewPostViewController()
+        navigationController?.pushViewController(newPostViewController, animated: true)
+        animatorManager.navigationType = .slide_push
     }
 }
 extension HomeViewController:HomeMainViewDelegate {
