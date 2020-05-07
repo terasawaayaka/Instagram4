@@ -26,6 +26,8 @@
 		1F2C24C02463AD7D0089BF0C /* NewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24BE2463AD7D0089BF0C /* NewPostViewController.xib */; };
 		1F2C24C32463C08E0089BF0C /* NewPostMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24C12463C08E0089BF0C /* NewPostMainView.swift */; };
 		1F2C24C42463C08E0089BF0C /* NewPostMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24C22463C08E0089BF0C /* NewPostMainView.xib */; };
+		1F2C24C62463C42F0089BF0C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24C52463C42F0089BF0C /* GoogleService-Info.plist */; };
+		1F2C24C92463C6E60089BF0C /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24C82463C6E60089BF0C /* PostModel.swift */; };
 		2E9FF20E50A0E196F2C325CD /* Pods_Instageam4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412B387E8ED95BBA0CFC51C3 /* Pods_Instageam4.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		1F2C24BE2463AD7D0089BF0C /* NewPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostViewController.xib; sourceTree = "<group>"; };
 		1F2C24C12463C08E0089BF0C /* NewPostMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMainView.swift; sourceTree = "<group>"; };
 		1F2C24C22463C08E0089BF0C /* NewPostMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostMainView.xib; sourceTree = "<group>"; };
+		1F2C24C52463C42F0089BF0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F2C24C82463C6E60089BF0C /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		38392E92EA5785D90CC1901C /* Pods-Instageam4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instageam4.debug.xcconfig"; path = "Target Support Files/Pods-Instageam4/Pods-Instageam4.debug.xcconfig"; sourceTree = "<group>"; };
 		412B387E8ED95BBA0CFC51C3 /* Pods_Instageam4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instageam4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69050D0A23E0EC1A4E3F644 /* Pods-Instageam4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instageam4.release.xcconfig"; path = "Target Support Files/Pods-Instageam4/Pods-Instageam4.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 		1F2C249124639B060089BF0C /* Instageam4 */ = {
 			isa = PBXGroup;
 			children = (
+				1F2C24C72463C6CB0089BF0C /* Model */,
 				1F2C24BC2463AD5A0089BF0C /* NewPost */,
 				1F2C24B32463A6AF0089BF0C /* Post */,
 				1F2C24A624639B820089BF0C /* Home */,
@@ -98,6 +103,7 @@
 				1F2C249B24639B0A0089BF0C /* Assets.xcassets */,
 				1F2C249D24639B0A0089BF0C /* LaunchScreen.storyboard */,
 				1F2C24A024639B0A0089BF0C /* Info.plist */,
+				1F2C24C52463C42F0089BF0C /* GoogleService-Info.plist */,
 			);
 			path = Instageam4;
 			sourceTree = "<group>";
@@ -135,6 +141,14 @@
 				1F2C24C22463C08E0089BF0C /* NewPostMainView.xib */,
 			);
 			path = NewPost;
+			sourceTree = "<group>";
+		};
+		1F2C24C72463C6CB0089BF0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F2C24C82463C6E60089BF0C /* PostModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		21E3B0997081DA3F353ECDE3 /* Frameworks */ = {
@@ -223,6 +237,7 @@
 				1F2C24AA24639B990089BF0C /* HomeViewController.xib in Resources */,
 				1F2C24B72463A6C50089BF0C /* PostViewController.xib in Resources */,
 				1F2C24C42463C08E0089BF0C /* NewPostMainView.xib in Resources */,
+				1F2C24C62463C42F0089BF0C /* GoogleService-Info.plist in Resources */,
 				1F2C24BB2463A8DC0089BF0C /* PostMainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F2C24B62463A6C50089BF0C /* PostViewController.swift in Sources */,
+				1F2C24C92463C6E60089BF0C /* PostModel.swift in Sources */,
 				1F2C249324639B060089BF0C /* AppDelegate.swift in Sources */,
 				1F2C24B12463A1FA0089BF0C /* HomeTableViewCell.swift in Sources */,
 				1F2C24BA2463A8DC0089BF0C /* PostMainView.swift in Sources */,
