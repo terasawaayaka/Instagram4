@@ -61,16 +61,47 @@ extension PostModel {
             success(models)
         })
     }
-
+    static func readAt(id: String,success:@escaping(PostModel) -> Void,failure:@escaping() -> Void) {
+        let dbRef = Database.database().reference().child(PATH).child(id)
+        dbRef.observe(.value) { (snapshot) in
+            guard let data = snapshot.value as? [String: Any] else {
+                failure()
+                return
+            }
+            let model: PostModel = parse(data: data)
+            success(model)
+        }
+    }
 }
 
 //MARK: - Update
 extension PostModel {
-    
+    static func update(request: PostModel,success:@escaping() -> Void) {
+        let id = request.id
+        let dbRef = Database.database().reference().child(PATH).child(request.id)
+        let parameter = setParameter(request: request)
+        dbRef.updateChildValues(parameter) {(error,dbRef) in
+            if error != nil {
+                print("updateエラー:",error)
+            } else {
+                success()
+            }
+        }
+    }
+
 }
 
 //MARK: - Delete
 extension PostModel {
-    
+    static func delete(id: String,success:@escaping() -> Void) {
+        let dbRef = Database.database().reference().child(PATH).child(id)
+        dbRef.removeValue {(error,dbRef) in
+            if error != nil {
+                print("deleteエラー:",error)
+            } else {
+                success()
+            }
+        }
+    }
 }
 

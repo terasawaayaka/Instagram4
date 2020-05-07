@@ -38,7 +38,10 @@ extension PostViewController:HeaderViewDelegate {
         animatorManager.navigationType = .slide_pop
     }
     func touchedRightButton(_ sender: UIButton) {
-        //todo
+        let editViewController = EditViewController()
+        editViewController.postModel = postModel
+        editViewController.modalPresentationStyle = .fullScreen
+        present(editViewController,animated: true,completion: nil)
     }
 }
 // MARK: - method
@@ -54,5 +57,11 @@ extension PostViewController {
     }
     func getModel() {
         self.postMainView.getModel(postModel: postModel)
+        PostModel.readAt(id: postModel.id, success: { (postModel) in
+            self.postModel = postModel
+        }) {
+            self.navigationController?.popViewController(animated: true)
+            self.animatorManager.navigationType = .pop
+        }
     }
 }
