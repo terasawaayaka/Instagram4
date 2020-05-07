@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireImage (3.6.0):
+    - Alamofire (~> 4.9)
+  - PGFramework (1.2.4):
+    - Alamofire
+    - AlamofireImage
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9.1)
+  - PGFramework (~> 1.2.4)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - PGFramework
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  PGFramework: d7517c97bdf54ad59c960b817a3425b85d2c8ee8
+
+PODFILE CHECKSUM: 79608e3fbce06eadc40865fa4837f54d3d21c6cb
+
+COCOAPODS: 1.9.1
