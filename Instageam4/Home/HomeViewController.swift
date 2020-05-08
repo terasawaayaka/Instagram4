@@ -7,8 +7,9 @@
 //
 
 import UIKit
-
 import PGFramework
+import FirebaseAuth
+
 // MARK: - Property
 class HomeViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
@@ -27,6 +28,11 @@ extension HomeViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UserModel.logOut {}
+        if Auth.auth().currentUser == nil {
+            let sighUpViewController = SighUpViewController()
+            navigationController?.pushViewController(sighUpViewController, animated: false)
+        }
         getModel()
     }
 }

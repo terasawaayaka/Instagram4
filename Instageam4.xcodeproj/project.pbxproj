@@ -32,6 +32,13 @@
 		1F2C24CE2463D7DE0089BF0C /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24CC2463D7DE0089BF0C /* EditViewController.xib */; };
 		1F2C24D12463D9EC0089BF0C /* EditMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24CF2463D9EC0089BF0C /* EditMainView.swift */; };
 		1F2C24D22463D9EC0089BF0C /* EditMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24D02463D9EC0089BF0C /* EditMainView.xib */; };
+		1F2C24D62464F0680089BF0C /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24D42464F0680089BF0C /* MyPageViewController.swift */; };
+		1F2C24D72464F0680089BF0C /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24D52464F0680089BF0C /* MyPageViewController.xib */; };
+		1F2C24DC2464F18E0089BF0C /* SighUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24DA2464F18E0089BF0C /* SighUpViewController.swift */; };
+		1F2C24DD2464F18E0089BF0C /* SighUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24DB2464F18E0089BF0C /* SighUpViewController.xib */; };
+		1F2C24E02464F2A50089BF0C /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24DE2464F2A50089BF0C /* SignUpMainView.swift */; };
+		1F2C24E12464F2A50089BF0C /* SignUpMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C24DF2464F2A50089BF0C /* SignUpMainView.xib */; };
+		1F2C24E32464FAED0089BF0C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C24E22464FAED0089BF0C /* UserModel.swift */; };
 		2E9FF20E50A0E196F2C325CD /* Pods_Instageam4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412B387E8ED95BBA0CFC51C3 /* Pods_Instageam4.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +70,13 @@
 		1F2C24CC2463D7DE0089BF0C /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		1F2C24CF2463D9EC0089BF0C /* EditMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMainView.swift; sourceTree = "<group>"; };
 		1F2C24D02463D9EC0089BF0C /* EditMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMainView.xib; sourceTree = "<group>"; };
+		1F2C24D42464F0680089BF0C /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		1F2C24D52464F0680089BF0C /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
+		1F2C24DA2464F18E0089BF0C /* SighUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SighUpViewController.swift; sourceTree = "<group>"; };
+		1F2C24DB2464F18E0089BF0C /* SighUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SighUpViewController.xib; sourceTree = "<group>"; };
+		1F2C24DE2464F2A50089BF0C /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
+		1F2C24DF2464F2A50089BF0C /* SignUpMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpMainView.xib; sourceTree = "<group>"; };
+		1F2C24E22464FAED0089BF0C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		38392E92EA5785D90CC1901C /* Pods-Instageam4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instageam4.debug.xcconfig"; path = "Target Support Files/Pods-Instageam4/Pods-Instageam4.debug.xcconfig"; sourceTree = "<group>"; };
 		412B387E8ED95BBA0CFC51C3 /* Pods_Instageam4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instageam4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69050D0A23E0EC1A4E3F644 /* Pods-Instageam4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instageam4.release.xcconfig"; path = "Target Support Files/Pods-Instageam4/Pods-Instageam4.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +115,8 @@
 		1F2C249124639B060089BF0C /* Instageam4 */ = {
 			isa = PBXGroup;
 			children = (
+				1F2C24D82464F1540089BF0C /* Auth */,
+				1F2C24D32464F0480089BF0C /* MyPage */,
 				1F2C24CA2463D7C40089BF0C /* Edit */,
 				1F2C24C72463C6CB0089BF0C /* Model */,
 				1F2C24BC2463AD5A0089BF0C /* NewPost */,
@@ -156,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2C24C82463C6E60089BF0C /* PostModel.swift */,
+				1F2C24E22464FAED0089BF0C /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +186,34 @@
 				1F2C24D02463D9EC0089BF0C /* EditMainView.xib */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		1F2C24D32464F0480089BF0C /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				1F2C24D42464F0680089BF0C /* MyPageViewController.swift */,
+				1F2C24D52464F0680089BF0C /* MyPageViewController.xib */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		1F2C24D82464F1540089BF0C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1F2C24D92464F16D0089BF0C /* SighUp */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		1F2C24D92464F16D0089BF0C /* SighUp */ = {
+			isa = PBXGroup;
+			children = (
+				1F2C24DA2464F18E0089BF0C /* SighUpViewController.swift */,
+				1F2C24DB2464F18E0089BF0C /* SighUpViewController.xib */,
+				1F2C24DE2464F2A50089BF0C /* SignUpMainView.swift */,
+				1F2C24DF2464F2A50089BF0C /* SignUpMainView.xib */,
+			);
+			path = SighUp;
 			sourceTree = "<group>";
 		};
 		21E3B0997081DA3F353ECDE3 /* Frameworks */ = {
@@ -255,10 +300,13 @@
 				1F2C249A24639B060089BF0C /* Main.storyboard in Resources */,
 				1F2C24C02463AD7D0089BF0C /* NewPostViewController.xib in Resources */,
 				1F2C24B22463A1FA0089BF0C /* HomeTableViewCell.xib in Resources */,
+				1F2C24D72464F0680089BF0C /* MyPageViewController.xib in Resources */,
 				1F2C24AA24639B990089BF0C /* HomeViewController.xib in Resources */,
+				1F2C24E12464F2A50089BF0C /* SignUpMainView.xib in Resources */,
 				1F2C24B72463A6C50089BF0C /* PostViewController.xib in Resources */,
 				1F2C24D22463D9EC0089BF0C /* EditMainView.xib in Resources */,
 				1F2C24C42463C08E0089BF0C /* NewPostMainView.xib in Resources */,
+				1F2C24DD2464F18E0089BF0C /* SighUpViewController.xib in Resources */,
 				1F2C24C62463C42F0089BF0C /* GoogleService-Info.plist in Resources */,
 				1F2C24BB2463A8DC0089BF0C /* PostMainView.xib in Resources */,
 			);
@@ -315,11 +363,15 @@
 			files = (
 				1F2C24B62463A6C50089BF0C /* PostViewController.swift in Sources */,
 				1F2C24C92463C6E60089BF0C /* PostModel.swift in Sources */,
+				1F2C24DC2464F18E0089BF0C /* SighUpViewController.swift in Sources */,
 				1F2C249324639B060089BF0C /* AppDelegate.swift in Sources */,
 				1F2C24D12463D9EC0089BF0C /* EditMainView.swift in Sources */,
 				1F2C24B12463A1FA0089BF0C /* HomeTableViewCell.swift in Sources */,
 				1F2C24BA2463A8DC0089BF0C /* PostMainView.swift in Sources */,
+				1F2C24E02464F2A50089BF0C /* SignUpMainView.swift in Sources */,
 				1F2C249524639B060089BF0C /* SceneDelegate.swift in Sources */,
+				1F2C24D62464F0680089BF0C /* MyPageViewController.swift in Sources */,
+				1F2C24E32464FAED0089BF0C /* UserModel.swift in Sources */,
 				1F2C24BF2463AD7D0089BF0C /* NewPostViewController.swift in Sources */,
 				1F2C24C32463C08E0089BF0C /* NewPostMainView.swift in Sources */,
 				1F2C24AD2463A16A0089BF0C /* HomeMainView.swift in Sources */,
