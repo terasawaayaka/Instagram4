@@ -13,6 +13,7 @@ import PGFramework
 class PostViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var postMainView: PostMainView!
+    
     var postModel: PostModel = PostModel()
 }
 // MARK: - Life cycle

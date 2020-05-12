@@ -18,6 +18,8 @@ extension PostMainViewDelegate {
 class PostMainView: BaseView {
     weak var delegate: PostMainViewDelegate? = nil
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var postImageView: UIImageView!
     var postModel: PostModel = PostModel()
 }
 // MARK: - Life cycle
@@ -36,5 +38,8 @@ extension PostMainView {
         updateCell(postModel: postModel) }
     func updateCell(postModel: PostModel) {
         descriptionLabel.text = postModel.description
+        if let url = URL(string: postModel.image_paths[0]) {
+            postImageView.af_setImage(withURL: url)
+        }
     }
 }

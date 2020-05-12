@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPageViewController" customModule="Instageam4" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="Instageam4" customModuleProvider="target">
             <connections>
-                <outlet property="headerView" destination="UxI-bs-QEK" id="Zk0-4t-evH"/>
-                <outlet property="myPageMainView" destination="yLZ-ba-nzw" id="FCw-qz-GJD"/>
+                <outlet property="editProfileMainView" destination="RIk-aj-55S" id="62C-5W-pOp"/>
+                <outlet property="headerView" destination="hE8-6G-dB5" id="j5I-Lm-Nx4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,27 +19,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxI-bs-QEK" customClass="HeaderView" customModule="PGFramework">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hE8-6G-dB5" customClass="HeaderView" customModule="PGFramework">
                     <rect key="frame" x="0.0" y="44" width="414" height="48"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="48" id="iwi-zX-7Ix"/>
+                        <constraint firstAttribute="height" constant="48" id="g4g-2g-GVE"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLZ-ba-nzw" customClass="MyPageMainView" customModule="Instageam4" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-aj-55S" customClass="EditProfileMainView" customModule="Instageam4" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="UxI-bs-QEK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5Iq-pe-QDe"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yLZ-ba-nzw" secondAttribute="trailing" id="I0r-DB-5jb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yLZ-ba-nzw" secondAttribute="bottom" id="Ow1-QN-dAt"/>
-                <constraint firstItem="yLZ-ba-nzw" firstAttribute="top" secondItem="UxI-bs-QEK" secondAttribute="bottom" id="Yeg-cf-wAL"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UxI-bs-QEK" secondAttribute="trailing" id="d2G-p2-KAR"/>
-                <constraint firstItem="UxI-bs-QEK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oYq-bt-oAY"/>
-                <constraint firstItem="yLZ-ba-nzw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sjH-Vb-iaM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RIk-aj-55S" secondAttribute="bottom" id="01U-PI-Vdx"/>
+                <constraint firstItem="RIk-aj-55S" firstAttribute="top" secondItem="hE8-6G-dB5" secondAttribute="bottom" id="Lve-5g-nke"/>
+                <constraint firstItem="RIk-aj-55S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SEA-Ed-jfu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RIk-aj-55S" secondAttribute="trailing" id="YV8-sJ-4qD"/>
+                <constraint firstItem="hE8-6G-dB5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gNj-dr-7Us"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hE8-6G-dB5" secondAttribute="trailing" id="nPr-os-YnH"/>
+                <constraint firstItem="hE8-6G-dB5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wRk-Nn-y2f"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="103"/>

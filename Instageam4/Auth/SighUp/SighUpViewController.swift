@@ -43,6 +43,11 @@ extension SighUpViewController:SignUpMainViewDelegate {
             print("SignUpエラー:",error)
         }
     }
+    func touchedSignInButton() {
+        let signInViewController = SignInViewController()
+        navigationController?.pushViewController(signInViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
 }
 // MARK: - method
 extension SighUpViewController {

@@ -17,6 +17,8 @@ extension HomeTableViewCellDelegate {
 class HomeTableViewCell: BaseTableViewCell {
     weak var delegate: HomeTableViewCellDelegate? = nil
     @IBOutlet weak var descriptionLavel: UILabel!
+    
+    @IBOutlet weak var postImage: UIImageView!
 }
 // MARK: - Life cycle
 extension HomeTableViewCell {
@@ -32,5 +34,8 @@ extension HomeTableViewCell {
 extension HomeTableViewCell {
     func updateCell(postModel: PostModel) {
         descriptionLavel.text = postModel.description
+        if let url = URL(string: postModel.image_paths[0]) {
+            postImage.af_setImage(withURL: url)
+        }
     }
 }

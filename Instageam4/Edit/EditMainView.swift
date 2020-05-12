@@ -23,6 +23,8 @@ class EditMainView: BaseView {
             delegate.deleteButton()
         }
     }
+    
+    @IBOutlet weak var postImageView: UIImageView!
 }
 // MARK: - Life cycle
 extension EditMainView {
@@ -38,5 +40,8 @@ extension EditMainView {
 extension EditMainView {
     func updateView(postModel: PostModel) {
         editTextField.text = postModel.description
+        if let url = URL(string: postModel.image_paths[0]) {
+            postImageView.af_setImage(withURL: url)
+        }
     }
 }

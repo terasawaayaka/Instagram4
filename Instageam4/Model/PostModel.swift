@@ -9,17 +9,22 @@
 import UIKit
 import PGFramework
 import FirebaseDatabase
+import FirebaseStorage
 
 class PostModel {
     fileprivate static let PATH: String = "post"
     var id : String = String()
     var description: String = String()
+    var image_paths : [String] = [String]()
+    var post_user_name : String = String()
 }
 extension PostModel {
     static func parse(data: [String: Any]) -> PostModel {
         let model: PostModel = PostModel()
         if let id = data["id"] as? String {model.id = id}
         if let description = data["description"] as? String {model.description = description}
+        if let post_user_name = data["post_user_name"] as? String {model.post_user_name = post_user_name}
+        if let image_paths = data["image_paths"] as? [String] {model.image_paths = image_paths}
         return model
     }
 }
@@ -29,20 +34,27 @@ extension PostModel {
         var parameter: [String:Any] = [:]
         parameter["id"] = request.id
         parameter["description"] = request.description
+        parameter["post_user_name"] = request.post_user_name
+        parameter["image_paths"] = request.image_paths
         return parameter
     }
 }
 
 //MARK: - Create
 extension PostModel {
-    static func create(request: PostModel,success:@escaping() -> Void) {
+    static func create(request: PostModel,images: [UIImage],success:@escaping() -> Void) {
         let dbRef = Database.database().reference().child(PATH).childByAutoId()
         if let key = dbRef.key {
             request.id = key
         }
-        let parameter = setParameter(request: request)
-        dbRef.setValue(parameter)
-        success()
+        var parameter = setParameter(request: request)
+        uploadPhoto(photoName: request.id, image: images, success: { (downloadPaths) in
+            parameter["image_paths"] = downloadPaths
+            dbRef.setValue(parameter)
+            success()
+        }) {
+            print("写真アップロードエラー")
+        }
     }
 }
 //MARK: - Read
@@ -105,3 +117,39 @@ extension PostModel {
     }
 }
 
+extension PostModel {
+    static func uploadPhoto(photoName: String, image: [UIImage]?, success: @escaping ([String]) -> Void, failure: @escaping () -> Void) -> Void{
+        let group = DispatchGroup()
+        let queue = DispatchQueue(label: ".photo")
+        guard let images = image else {return}
+        var num = 1
+        var paths: [String] = []
+        images.forEach { (image) in
+            group.enter()
+            queue.async {
+                guard let data = image.jpegData(compressionQuality: 0.05), data.count < 4000000 else {
+                    group.leave()
+                    return failure()
+                }
+                let fileRef = Storage.storage().reference().child("images/" + photoName + num.description)
+                num += 1
+                let metaData = StorageMetadata()
+                metaData.contentType = "image/jpeg"
+                fileRef.putData(data, metadata: metaData) { (meta, error) in
+                    fileRef.downloadURL { (url, error) in
+                        if let _ = error {
+                            return
+                        } else {
+                            paths.append(url?.description ?? "")
+                            group.leave()
+                        }
+                    }
+                }
+            }
+        }
+        group.notify(queue: .main) {
+            success(paths)
+        }
+    }
+
+}

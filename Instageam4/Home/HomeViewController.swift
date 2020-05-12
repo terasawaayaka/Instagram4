@@ -14,12 +14,14 @@ import FirebaseAuth
 class HomeViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var homeMainView: HomeMainView!
+    
     var postModels: [PostModel] = [PostModel]()
 }
 // MARK: - Life cycle
 extension HomeViewController {
     override func loadView() {
         super.loadView()
+        tabBarController?.tabBar.isHidden = false
         setHeaderView()
         setDelegate()
     }
@@ -28,7 +30,7 @@ extension HomeViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UserModel.logOut {}
+//        UserModel.logOut{}
         if Auth.auth().currentUser == nil {
             let sighUpViewController = SighUpViewController()
             navigationController?.pushViewController(sighUpViewController, animated: false)

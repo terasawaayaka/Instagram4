@@ -10,6 +10,7 @@ import UIKit
 
 import PGFramework
 protocol NewPostMainViewDelegate: NSObjectProtocol{
+    func touchedAddImageButton()
 }
 extension NewPostMainViewDelegate {
 }
@@ -18,6 +19,13 @@ class NewPostMainView: BaseView {
     weak var delegate: NewPostMainViewDelegate? = nil
         
     @IBOutlet weak var textField: UITextField!
+    @IBAction func touchedAddImageButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedAddImageButton()
+        }
+    }
+    
+    @IBOutlet weak var postImageView: UIImageView!
 }
 // MARK: - Life cycle
 extension NewPostMainView {

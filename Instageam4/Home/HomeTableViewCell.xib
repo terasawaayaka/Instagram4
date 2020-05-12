@@ -18,7 +18,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRh-s9-whQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="528"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baloon" translatesAutoresizingMaskIntoConstraints="NO" id="CrI-KZ-iXf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CrI-KZ-iXf">
                                 <rect key="frame" x="0.0" y="80" width="414" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -46,11 +46,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLavel" destination="5Kp-ub-V3R" id="sm3-y6-mqi"/>
+                <outlet property="postImage" destination="CrI-KZ-iXf" id="Qhz-3G-Nh9"/>
             </connections>
             <point key="canvasLocation" x="153.62318840579712" y="203.57142857142856"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="baloon" width="6000" height="4000"/>
-    </resources>
 </document>
