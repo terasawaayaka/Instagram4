@@ -88,20 +88,25 @@ extension PostModel {
 
 //MARK: - Update
 extension PostModel {
-    static func update(request: PostModel,success:@escaping() -> Void) {
+    static func update(request: PostModel,images: [UIImage],success:@escaping() -> Void) {
         let id = request.id
         let dbRef = Database.database().reference().child(PATH).child(request.id)
-        let parameter = setParameter(request: request)
-        dbRef.updateChildValues(parameter) {(error,dbRef) in
-            if error != nil {
-                print("updateエラー:",error)
-            } else {
-                success()
-            }
+        var parameter = setParameter(request: request)
+        uploadPhoto(photoName: request.id, image: images, success: { (downloadPaths) in
+                parameter["image_paths"] = downloadPaths
+            dbRef.updateChildValues(parameter) {(error,dbRef) in
+                if error != nil {
+                    print("updateエラー:",error)
+                } else {
+                    success()
+                }
+                }
+            }) {
+                print("写真アップロードエラー")
+            
         }
     }
-
-}
+    }
 
 //MARK: - Delete
 extension PostModel {
